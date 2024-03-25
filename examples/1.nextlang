@@ -1,0 +1,48 @@
+import "io"
+
+import "../file"
+import "package:/package_name/sub_folder/file"
+
+func add(a: int, b: int): int {
+    return a + b
+}
+
+func main() {
+    var foo = 34
+    var bar = 35
+
+    const buz = add(foo, bar)
+
+    println(f"foo + bar = ${buz}")
+}
+
+func control_flow(condition: bool) {
+    if (condition) {
+        ...
+    } else if (!condition) {
+        ...
+    } else if (condition || false) {
+        ...
+    } else if (condition && true) {
+        ...
+    } else {
+        ...
+    }
+
+    # inline if
+    const _ = if (condition) 69 else 420
+
+    # match
+    match (condition) {
+        true => println("condition is true"),
+        false => {
+            ...
+        }
+    }
+
+    # inline match
+    const _ = match (condition) {
+        true => 69,
+        false => 420
+    }
+}

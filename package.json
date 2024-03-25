@@ -1,0 +1,25 @@
+{
+    "name": "nextlang",
+    "version": "0.1.0",
+    "scripts": {
+        "start": "node --experimental-specifier-resolution=node .",
+        "start:dev": "ts-node --project . src/index.ts",
+        "start:debug": "NODE_OPTIONS=--inspect ts-node --project . src/index.ts",
+        "build": "tsc -p .",
+        "watch": "tsc -w -p .",
+        "test": "jest",
+        "lint": "esling .",
+        "lint:fix": "esling --fix .",
+        "format": "prettier . -w",
+        "migrate:up": "npx db-migrate up --env dev -m ./migrations",
+        "migrate:down": "npx db-migrate down --env dev -m ./migrations"
+    },
+    "dependencies": {
+        "lodash": "^4.17.21"
+    },
+    "devDependencies": {
+        "@types/node": "^20.11.30",
+        "ts-node": "^10.9.2",
+        "typescript": "^5.4.3"
+    }
+}
